@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JS com Guanabara</title>
+</head>
+<style>
+    body {
+        background-color: aqua;
+        color: black;
+        font: normal, 18px, arial;
+    }
+    
+    div#area {
+        font: normal 20px;
+        arial;
+        background-color: blueviolet;
+        color: white;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h1> Aprendendo a manipular o <strong> DOM </strong> em JAVASCRIPT </h1>
+
+    <div id="area">
+        Interaja *--*
+    </div>
+
+    <script>
+        /*var clique = window.document.getElementById('msg')
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            clique.style.background = 'green'
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        clique.innerText = 'TAP HERE'
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        var msg = window.document.querySelector('div#msg')
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        msg.style.background = 'blue' */
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+
+        function clicar() {
+
+            a.innerText = 'Você clicou!'
+            a.style.background = 'red';
+        }
+
+        function sair() {
+            a.innerText = 'saiu'
+            a.style.background = 'green'
+
+
+        }
+
+        function entrar() {
+            a.innerText = 'entrou'
+            a.style.background = 'blueviolet '
+
+
+        }
+    </script>
+
+</body>
+
+</html>
